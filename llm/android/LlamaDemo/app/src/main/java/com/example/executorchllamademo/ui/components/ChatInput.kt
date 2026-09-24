@@ -157,7 +157,7 @@ fun ChatInput(
             ) {
                 if (inputText.isEmpty()) {
                     Text(
-                        text = "Type a message...",
+                        text = "Paste a suspicious SMS here...",
                         color = appColors.textOnInput.copy(alpha = 0.6f),
                         fontSize = 14.sp,
                         letterSpacing = 0.sp

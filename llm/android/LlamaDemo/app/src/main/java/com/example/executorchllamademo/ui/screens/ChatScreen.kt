@@ -149,7 +149,7 @@ fun ChatScreen(
             TopAppBar(
                 title = {
                     Text(
-                        text = "Chat with assistant",
+                        text = "Unscam",
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Bold
                     )

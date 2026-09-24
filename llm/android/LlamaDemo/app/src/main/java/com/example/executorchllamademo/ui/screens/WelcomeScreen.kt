@@ -86,7 +86,7 @@ fun WelcomeScreen(
             )
 
             Text(
-                text = "Configure your LLM model and app settings to get started.",
+                text = "Your offline SMS scam detector. Load a model below, then paste any suspicious message.",
                 fontSize = 14.sp,
                 color = appColors.settingsSecondaryText
             )
