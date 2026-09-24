@@ -630,6 +630,9 @@ class ChatViewModel(application: Application) : AndroidViewModel(application), L
             _messages.add(Message(imageURI.toString(), true, MessageType.IMAGE, 0))
         }
 
+
+        module?.resetContext()
+        shouldAddSystemPrompt=true
         val rawPrompt = inputText
         val finalPrompt: String
 
