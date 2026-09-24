@@ -62,7 +62,7 @@ fun WelcomeScreen(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                text = "ExecuTorch Llama Demo",
+                text = "Unscam",
                 color = appColors.textOnNavBar,
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Bold,
@@ -79,7 +79,7 @@ fun WelcomeScreen(
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Text(
-                text = "Welcome to ExecuTorch Llama Demo",
+                text = "Welcome to Unscam",
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,
                 color = appColors.settingsText

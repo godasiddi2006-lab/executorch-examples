@@ -805,8 +805,8 @@ class UIWorkflowTest {
         composeTestRule.waitForIdle()
 
         // Verify Welcome screen elements are displayed
-        composeTestRule.onNodeWithText("ExecuTorch Llama Demo").assertIsDisplayed()
-        composeTestRule.onNodeWithText("Welcome to ExecuTorch Llama Demo").assertIsDisplayed()
+        composeTestRule.onNodeWithText("o").assertIsDisplayed()
+        composeTestRule.onNodeWithText("Welcome to o").assertIsDisplayed()
         composeTestRule.onNodeWithText("Load local model").assertIsDisplayed()
         composeTestRule.onNodeWithText("App Settings").assertIsDisplayed()
 
@@ -825,11 +825,11 @@ class UIWorkflowTest {
         // Go back to Welcome screen
         composeTestRule.onNodeWithContentDescription("Back").performClick()
         composeTestRule.waitUntil(timeoutMillis = 3000) {
-            composeTestRule.onAllNodesWithText("ExecuTorch Llama Demo").fetchSemanticsNodes().isNotEmpty()
+            composeTestRule.onAllNodesWithText("o").fetchSemanticsNodes().isNotEmpty()
         }
 
         // Verify we're back on Welcome screen
-        composeTestRule.onNodeWithText("ExecuTorch Llama Demo").assertIsDisplayed()
+        composeTestRule.onNodeWithText("o").assertIsDisplayed()
         composeTestRule.onNodeWithText("Load local model").assertIsDisplayed()
 
         // Test navigation to Model Settings
