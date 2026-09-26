@@ -19,10 +19,11 @@ object PromptFormat {
     const val THINKING_MODE_PLACEHOLDER = "{{ thinking_mode }}"
     const val DEFAULT_SYSTEM_PROMPT = "Answer the questions in a few sentences"
 
+
     @JvmStatic
     fun getSystemPromptTemplate(modelType: ModelType): String {
         return when (modelType) {
-            ModelType.LLAMA_3 -> "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n" +
+            ModelType.LLAMA_3 -> "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\n" +
                     SYSTEM_PLACEHOLDER +
                     "<|eot_id|>"
             ModelType.QWEN_3 -> "<|im_start|>system\n$SYSTEM_PLACEHOLDER<|im_end|>\n"
@@ -34,7 +35,12 @@ object PromptFormat {
     fun getUserPromptTemplate(modelType: ModelType): String {
         return when (modelType) {
             ModelType.GEMMA_3 -> "<start_of_turn>user\n${USER_PLACEHOLDER}<end_of_turn>\n<start_of_turn>model"
-            ModelType.LLAMA_3, ModelType.LLAMA_GUARD_3 ->
+            ModelType.LLAMA_3 ->
+                "<|start_header_id|>user<|end_header_id|>\n\n" +
+                        USER_PLACEHOLDER +
+                        "<|eot_id|>" +
+                        "<|start_header_id|>assistant<|end_header_id|>\n\n"
+            ModelType.LLAMA_GUARD_3 ->
                 "<|start_header_id|>user<|end_header_id|>\n" +
                         USER_PLACEHOLDER +
                         "<|eot_id|>" +
@@ -49,6 +55,7 @@ object PromptFormat {
             else -> USER_PLACEHOLDER
         }
     }
+
 
     @JvmStatic
     fun getStopToken(modelType: ModelType): String {

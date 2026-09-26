@@ -47,7 +47,7 @@ data class ModuleSettings(
 
     fun getFormattedSystemPrompt(): String {
         return PromptFormat.getSystemPromptTemplate(getEffectiveModelType())
-            .replace(PromptFormat.SYSTEM_PLACEHOLDER, "You are an SMS scam detector for Indian users. Reply SCAM or SAFE,then one line why.")
+            .replace(PromptFormat.SYSTEM_PLACEHOLDER, "You are an SMS scam detector for Indian users. Reply SCAM or SAFE, then one line why.")
     }
 
     fun getFormattedUserPrompt(prompt: String, thinkingMode: Boolean): String {
@@ -107,7 +107,6 @@ data class ModuleSettings(
         val newActiveId = if (models.isEmpty()) model.id else activeModelId
         return copy(models = newModels, activeModelId = newActiveId)
     }
-
     /**
      * Removes a model by ID. If the active model is removed, selects another.
      */
