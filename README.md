@@ -25,8 +25,8 @@ UnScam is an Android app that detects scam and phishing SMS messages completely 
 ## Deliverables (Phase 1)
 
 - Source code: this repository
-- Demo video: see demo/ folder
-- Technical report: see report/ folder
+- Demo video: Demo video: demo.mp4
+- Technical report: report.pdf
 
 ## Limitations
 
