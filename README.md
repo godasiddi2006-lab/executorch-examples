@@ -22,7 +22,7 @@ UnScam is an Android app that detects scam and phishing SMS messages completely 
 - 100% offline inference - works in airplane mode
 - Privacy-first: SMS content never leaves the phone
 
-## Deliverables (Phase 1)
+## Deliverables 
 
 - Source code: this repository
 - Demo video: Demo video: demo.mp4
